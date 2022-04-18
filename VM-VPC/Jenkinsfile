@@ -42,7 +42,7 @@ pipeline {
 			 {
                 //sh 'terraform $TF_ACTION $TF_APPROVE'
 				 sh 'terraform plan'
-				 sh 'terraform apply'
+				 sh 'terraform apply --auto-approve'
 			 }
 		 }
 	}

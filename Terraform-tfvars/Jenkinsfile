@@ -41,7 +41,7 @@ pipeline {
 		 steps {  
 			  dir('Terraform-tfvars')
 			 {
-                sh 'terraform $TF_ACTION $TFVARS $TF_APPROVE'
+                sh 'terraform $TF_ACTION --var-file="instance.tfvars" $TF_APPROVE'
 			 }
 		 }
 	}

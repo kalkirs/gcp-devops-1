@@ -40,7 +40,9 @@ pipeline {
 		 steps {  
 			  dir('VM-VPC')
 			 {
-                sh 'terraform $TF_ACTION $TF_APPROVE'
+                //sh 'terraform $TF_ACTION $TF_APPROVE'
+				 sh 'terraform plan'
+				 sh 'terraform apply'
 			 }
 		 }
 	}

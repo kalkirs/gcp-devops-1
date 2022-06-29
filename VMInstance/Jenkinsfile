@@ -1,8 +1,5 @@
 pipeline {
     agent any
-	//parameters {
-	//	string(bane: 'TARGET_ENV', defaultValue: 'PROD', description: 'Environment')
-	//}
 
 
     environment {
@@ -10,25 +7,11 @@ pipeline {
   }
      
     stages {
-	    
-	     stage('PACKER'){
-		    steps{
-			    scripts{
-				    build job: ('/Automation/PACKER')
-				    //build(job: 'pipelines/PACKER', wait: false)
-				    
-				    //parametes: [
-					//    [$class: 'StringParameterValue', name 'FROM_BUILD', value: "${BUILD_NUMBER}" ]
-					  //  ]
-			    }
-		    }
-	    }
         stage ('checkout'){
             steps {
                 git branch: 'main', url: 'https://github.com/ishaqmdgcp/gcp-devops.git'
             }
         }
-      
 	    
 
 		stage('Set Terraform path') {
@@ -71,8 +54,6 @@ pipeline {
 		 steps {  
 			  dir('VMInstance')
 			 {
-                //sh 'terraform $TF_ACTION $TF_APPROVE'
-		// sh 'terraform plan'
 		 sh 'terraform $TF_ACTION -auto-approve'
 				
 			 }

@@ -43,7 +43,7 @@ pipeline {
 		 steps {  
 			  dir('VMInstance')
 			 {
-		 sh 'terraform $TF_ACTION $TF_Approve'
+		 sh 'terraform $TF_ACTION $TF_APPROVE'
 				
 			 }
 		 }

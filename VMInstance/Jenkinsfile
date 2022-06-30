@@ -48,15 +48,6 @@ pipeline {
 			 }
 		 }
 	}
-      
-	     //stage('Initialize Destroy') {
-		// steps {  
-		//	  dir('VMInstance')
-		//	 {
-                //sh 'sleep 60'
-		//sh 'terraform destroy -auto-approve'
-		//	 }
-		 //}
-	// }
+
 }
 }

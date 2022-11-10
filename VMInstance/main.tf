@@ -1,7 +1,7 @@
 # This is the provider used to spin up the gcloud instance
 provider "google" {
  
-  project = "mihappens"
+  project = "mi-dev-lab"
   credentials = file("terraform.json")
   region  = "us-east1"
   

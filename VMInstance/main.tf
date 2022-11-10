@@ -15,7 +15,7 @@ resource "google_compute_instance" "vm-instance" {
 
   boot_disk {
     initialize_params {
-      image = "debian-10-buster-v202211029"
+      image = "debian-10-buster-v20221102"
     }
   }
     

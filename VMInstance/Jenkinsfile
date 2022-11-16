@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage ('checkout'){
             steps {
-                git branch: 'main', url: 'https://github.com/ishaqmdgcp/gcp-devops.git'
+                git branch: 'main', url: 'https://github.com/kalkirs/gcp-devops-1.git'
             }
         }
 	    

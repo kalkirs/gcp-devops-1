@@ -3,14 +3,14 @@ provider "google" {
  
   project = "murthylab"
   credentials = file("terraform.json")
-  region  = "us-east1"
+  region  = "us-central1"
   
 }
 
 resource "google_compute_instance" "vm-instance" {
   name         = "kalki-pipeline-tf"
   machine_type = "f1-micro"
-  zone         = "us-east1-b"
+  zone         = "us-central1-a"
 
 
   boot_disk {

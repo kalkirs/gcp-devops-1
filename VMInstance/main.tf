@@ -8,14 +8,14 @@ provider "google" {
 }
 
 resource "google_compute_instance" "vm-instance" {
-  name         = "test"
+  name         = "kalki-pipeline-tf"
   machine_type = "f1-micro"
   zone         = "us-east1-b"
 
 
   boot_disk {
     initialize_params {
-      image = "debian-10-buster-v20221102"
+      image = "ubuntu-1804-bionic-v20221018"
     }
   }
     
